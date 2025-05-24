@@ -1,0 +1,75 @@
+//   font-family: "Jost", sans-serif;
+//font-family: "Archivo", sans-serif;
+
+/* Нормализация стилей */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*variables*/
+$accent1: #000000;
+$accent2: #ffffff;
+$accent3: #6a6a6a;
+$accent4: #fb704f;
+$accent5: #2c5857;
+
+/*base styles*/
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  color: $accent1;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  transition: all 0.4s;
+
+  &:hover {
+    color: $accent4;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    font-size: 56%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+// utilities
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.container__half {
+  max-width: 60rem;
+  position: relative;
+  padding: 0 2rem;
+
+  &--right {
+    margin-right: auto;
+  }
+
+  &--left {
+    margin-left: auto;
+  }
+}

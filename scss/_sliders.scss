@@ -1,0 +1,31 @@
+#splide1 {
+  .splide__pagination {
+    bottom: 2.5rem;
+    gap: 5px;
+  }
+
+  .splide__pagination__page.is-active {
+    background: $accent4;
+  }
+
+  .splide__pagination__page {
+    transform: scale(1.4);
+  }
+
+  .splide__arrow {
+    background: transparent;
+  }
+
+  .splide__arrow svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .splide__arrow--prev {
+    left: 3rem;
+  }
+
+  .splide__arrow--next {
+    right: 3rem;
+  }
+}

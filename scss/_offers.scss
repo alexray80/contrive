@@ -1,0 +1,139 @@
+.offers {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 26rem);
+    gap: 3rem;
+  }
+
+  &__item {
+    position: relative;
+
+    &:first-child {
+      background-color: mix($accent5, $accent3);
+      grid-row: 1/3;
+      text-align: center;
+
+      .offers__item-img {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        width: calc(100% - 4rem);
+        height: 50%;
+      }
+
+      .offers__item-text {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .offers__item-btn {
+        align-self: center;
+      }
+
+      .offers__item-title {
+        font-size: 4.5rem;
+
+        span {
+          color: $accent4;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: darken($accent2, $amount: 60%);
+
+      .offers__item-img {
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+        width: 50%;
+        height: calc(100% - 4rem);
+      }
+
+      .offers__item-text {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    &:last-child {
+      background-color: darken(#9d7158, $amount: 10%);
+
+      .offers__item-img {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        width: 50%;
+        height: calc(100% - 4rem);
+      }
+
+      .offers__item-text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5rem;
+      }
+    }
+  }
+
+  &__item-img {
+    object-fit: contain;
+  }
+
+  &__item-text {
+    color: white;
+  }
+
+  &__item-btn {
+    align-self: flex-start;
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+  }
+
+  &__item-title {
+    font-family: "Jost", sans-serif;
+    margin-block: 1.4rem;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    text-transform: capitalize;
+  }
+
+  &__item-cat {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    &__items {
+      grid-template-columns: 1fr;
+      grid-template-rows: 50rem 25rem 25rem;
+      gap: 3rem;
+    }
+
+    &__item {
+      &:first-child {
+        grid-row: 1/2;
+      }
+    }
+  }
+}
