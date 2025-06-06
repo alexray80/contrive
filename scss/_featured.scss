@@ -1,0 +1,132 @@
+.featured {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__item {
+    width: calc((100% - 4rem) / 3);
+  }
+
+  &__img-block {
+    background-color: lighten($color: #ccc, $amount: 15%);
+    height: 40rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+  }
+
+  &__icons {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    transform: translateX(8rem);
+    transition: all 0.4s;
+  }
+
+  &__item:hover .featured__icons {
+    transform: translateX(0);
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $accent4;
+      color: white;
+    }
+  }
+
+  &__options-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1.4rem;
+  }
+
+  &__options {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__option {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+
+    &--red {
+      background-color: red;
+    }
+
+    &--green {
+      background-color: green;
+    }
+
+    &--yellow {
+      background-color: yellow;
+    }
+
+    &--blue {
+      background-color: blue;
+    }
+  }
+
+  &__icon--heart {
+    font-size: 2rem;
+    color: lighten($accent5, $amount: 20%);
+  }
+
+  &__desc {
+    margin-top: 3rem;
+  }
+
+  &__item-title {
+    text-transform: capitalize;
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    color: $accent4;
+    font-weight: 500;
+
+    &--old {
+      color: $accent3;
+      font-size: 1.5rem;
+      text-decoration-line: line-through;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__item {
+      width: calc((100% - 2rem) / 2);
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__item {
+      width: 100%;
+    }
+  }
+}
