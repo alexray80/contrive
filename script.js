@@ -71,3 +71,49 @@ function openTab(evt, tabName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+// model
+
+// Get the modal
+const modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+const modalBtn = document.getElementById("myBtn");
+
+console.log(modal, modalBtn);
+
+// Get the <span> element that closes the modal
+const closeBtn = document.getElementsByClassName("close")[0];
+
+console.log(closeBtn);
+
+// When the user clicks the button, open the modal
+modalBtn.onclick = function () {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+  stopVideo(modal);
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  stopVideo(modal);
+};
+
+const stopVideo = function (element) {
+  const iframe = element.querySelector("iframe");
+  const video = element.querySelector("video");
+  if (iframe) {
+    const iframeSrc = iframe.src;
+    iframe.src = iframeSrc;
+  }
+  if (video) {
+    video.pause();
+  }
+};

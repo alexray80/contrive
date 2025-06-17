@@ -965,7 +965,7 @@
               </p>
               <a href="#" class="btn btn--main video__btn">read more</a>
             </div>
-            <div class="video__block">
+            <div class="video__block" id="myBtn">
               <img src="images/video.jpg" alt="furniture" class="video__img" />
               <i class="fa-regular fa-circle-play video__icon"></i>
               <div class="video__outline">
@@ -979,6 +979,22 @@
       </section>
     </main>
     <footer></footer>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <i class="fa-solid fa-xmark close"></i>
+        <iframe
+          class="modal__video"
+          src="https://www.youtube.com/embed/Ud48Od1mbjM?si=mtl40XMUJZ0c6txu"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
