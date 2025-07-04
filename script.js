@@ -117,3 +117,21 @@ const stopVideo = function (element) {
     video.pause();
   }
 };
+
+// slider 2
+
+const options2 = {
+  arrows: true,
+  pagination: false,
+  perPage: 3,
+  gap: "3rem",
+  breakpoints: {
+    992: {
+      perPage: 2,
+    },
+    576: {
+      perPage: 1,
+    },
+  },
+};
+const splide2 = new Splide("#splide2", options2).mount();

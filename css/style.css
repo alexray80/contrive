@@ -1321,4 +1321,236 @@ a:hover {
     width: 80%;
     left: 10%;
   }
+}
+
+.offer {
+  background-color: #e8e8e6;
+  overflow: hidden;
+}
+.offer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.offer__text {
+  width: 40%;
+}
+.offer .section__title {
+  font-size: 7rem;
+}
+.offer .section__desc {
+  color: black;
+  text-transform: capitalize;
+  font-size: 2.3rem;
+  margin-bottom: 4rem;
+}
+.offer .section__desc span {
+  color: #fb704f;
+}
+.offer__img-wrapper {
+  width: 60%;
+  position: relative;
+}
+.offer__img {
+  position: absolute;
+  top: -5rem;
+  left: -5rem;
+  width: 120%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.hotspot {
+  position: absolute;
+  width: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+.hotspot:hover .hotspot__info {
+  visibility: visible;
+  opacity: 1;
+}
+.hotspot:nth-of-type(1) {
+  top: 50%;
+  left: 30%;
+}
+.hotspot:nth-of-type(2) {
+  top: 0;
+  right: 0;
+}
+.hotspot:nth-of-type(3) {
+  top: 30%;
+  left: 0;
+}
+.hotspot__info {
+  width: 22rem;
+  background-color: white;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 20;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.hotspot__info:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.hotspot__info::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1.4rem);
+  height: 2.8rem;
+  right: -1.3rem;
+  width: 1.4rem;
+  background-color: white;
+  -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
+          clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+.hotspot__dot {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+}
+.hotspot__dot::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: -0.8rem;
+  left: -0.8rem;
+}
+.hotspot--reverse .hotspot__info {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.hotspot--reverse .hotspot__info::after {
+  left: -1.3rem;
+  -webkit-clip-path: polygon(100% 0, 0% 50%, 100% 100%);
+          clip-path: polygon(100% 0, 0% 50%, 100% 100%);
+}
+.hotspot__price {
+  color: #fb704f;
+  font-weight: bold;
+}
+.hotspot__price--old {
+  color: #888;
+  text-decoration: line-through;
+}
+.hotspot__desc {
+  color: gray;
+  margin-block: 5px;
+  font-size: 1.5rem;
+}
+.hotspot__title {
+  text-transform: capitalize;
+  font-family: "Jost", sans-serif;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 1200px) {
+  .offer__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .offer__text {
+    width: 100%;
+    text-align: center;
+  }
+  .offer__img-wrapper {
+    width: 100%;
+  }
+  .offer__img {
+    position: inherit;
+  }
+}
+@media (max-width: 576px) {
+  .offer .section__title {
+    font-size: 5rem;
+  }
+}
+.reviews__items {
+  margin-top: 5rem;
+}
+.reviews__item {
+  border: 1px solid #eee;
+  padding: 4rem 3rem;
+}
+.reviews__item-img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.reviews__quote {
+  font-size: 4rem;
+  color: #fb704f;
+}
+.reviews__item-text {
+  color: grey;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.reviews__item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+.reviews__item-stars {
+  color: #ffb823;
+  font-size: 1.5rem;
+}
+.reviews__item-name {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  margin-block: 5px;
+}
+.reviews__item-pos {
+  text-transform: capitalize;
+  color: grey;
+  font-size: 1.5rem;
+}
+.reviews .splide__arrow {
+  background-color: transparent;
+}
+.reviews .splide__arrow--prev {
+  left: -4em;
+}
+.reviews .splide__arrow--prev svg {
+  -webkit-transform: scale(-1.6);
+          transform: scale(-1.6);
+}
+.reviews .splide__arrow--next {
+  right: -4em;
+}
+.reviews .splide__arrow--next svg {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+}
+.reviews .spldie__arrow:disabled {
+  opacity: 0.6;
+}
+@media (max-width: 1600px) {
+  .reviews .splide__arrow--prev {
+    left: -1em;
+  }
+  .reviews .splide__arrow--next {
+    right: -1em;
+  }
 }/*# sourceMappingURL=style.css.map */
